@@ -1,7 +1,7 @@
 {
     "lang": "en",
     "name": "distilbert_base_nli_stsb_mean_tokens",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "spacy_version": ">=2.3,<2.4",
     "description": "Wrapper of sentence-transformers models for spaCy",
     "author": "Martino Mensio",
@@ -9,7 +9,7 @@
     "url": "https://github.com/MartinoMensio/spacy-sentence-bert",
     "license": "MIT",
     "requirements": [
-        "spacy-sentence-bert==0.0.3"
+        "spacy-sentence-bert==0.0.4"
     ],
     "sources": [{
         "name": "sentence-transformers",
