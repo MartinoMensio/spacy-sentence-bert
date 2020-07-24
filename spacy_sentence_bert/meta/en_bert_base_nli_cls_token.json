@@ -1,7 +1,7 @@
 {
     "lang": "en",
     "name": "bert_base_nli_cls_token",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "spacy_version": ">=2.3,<2.4",
     "description": "Wrapper of sentence-transformers models for spaCy",
     "author": "Martino Mensio",
@@ -9,7 +9,7 @@
     "url": "https://github.com/MartinoMensio/spacy-sentence-bert",
     "license": "MIT",
     "requirements": [
-        "spacy-sentence-bert @ git+https://github.com/MartinoMensio/spacy-sentence-bert.git@v0.0.1"
+        "spacy-sentence-bert==0.0.3"
     ],
     "sources": [{
         "name": "sentence-transformers",

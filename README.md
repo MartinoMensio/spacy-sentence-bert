@@ -8,9 +8,10 @@ Keep in mind that `sentence-transformers` are configured with a maximum sequence
 
 ## Install
 
-To install this package, you can run:
+To install this package, you can run one of the following:
 
-- `pip install git+https://github.com/MartinoMensio/spacy-universal-sentence-encoder-tfhub.git`
+- `pip install spacy_sentence_bert`
+-  `pip install git+https://github.com/MartinoMensio/spacy-sentence-bert.git`
 
 ## Usage
 
@@ -20,7 +21,7 @@ import spacy_sentence_bert
 nlp = spacy_sentence_bert.load_model('en_bert_base_nli_cls_token')
 ```
 
-Or if a specific model is installed (TODO `pip install GITHUB_LINK`)
+Or if a specific model is installed (e.g. `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/en_bert_base_nli_cls_token-0.1.0/en_bert_base_nli_cls_token-0.1.0.tar.gz`)
 ```python
 import spacy
 nlp = spacy.load('en_bert_base_nli_cls_token')
