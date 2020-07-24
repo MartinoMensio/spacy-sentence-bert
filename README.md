@@ -38,6 +38,7 @@ From the [full list of models](https://docs.google.com/spreadsheets/d/14QplCdTCD
 | `xlm-r-large-en-ko-nli-ststb`          | `xx_xlm_r_base_en_ko_nli_ststb`           | 1024 | en,ko | 84.05       | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.0.4/xx_xlm_r_base_en_ko_nli_ststb-0.0.4.tar.gz#xx_xlm_r_base_en_ko_nli_ststb-0.0.4`  |
 
 
+The models, when first used, download to the folder defined with `TORCH_HOME` in the environment variables (default `~/.cache/torch`).
 
 ## Usage
 
@@ -82,10 +83,6 @@ print(doc_1[2:4].vector.shape)
 print(doc_1.similarity(doc_2[0:7]))
 ```
 
-
-
-
-The models, when first used, download to the folder defined with `TORCH_HOME` in the environment variables (default `~/.cache/torch`).
 
 
 ## Utils
