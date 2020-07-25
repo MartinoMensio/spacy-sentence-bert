@@ -39,6 +39,7 @@ class SentenceBert(object):
         
         if not nlp:
             nlp = spacy.blank(config['spacy_base_model'])
+            nlp.add_pipe(nlp.create_pipe('sentencizer'))
         nlp.add_pipe(add_model_to_doc, name='sentencebert_add_model_to_doc', first=True)
         nlp.add_pipe(SentenceBert.overwrite_vectors, name='sentencebert_overwrite_vectors', after='sentencebert_add_model_to_doc')
 
