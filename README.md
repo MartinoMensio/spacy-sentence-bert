@@ -23,23 +23,23 @@ From the [full list of models](https://docs.google.com/spreadsheets/d/14QplCdTCD
 
 |  sentence-BERT name                    |  spacy model name  |  dimensions          |  language  | STS benchmark | standalone install |
 |----------------------------------------|--------------------|----------------------|------------|---------------|---------|
-| `bert-base-nli-mean-tokens`            | `en_bert_base_nli_mean_tokens`            |  768 | en | 77.12          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_base_nli_mean_tokens-0.1.0.tar.gz#en_bert_base_nli_mean_tokens-0.1.0`  |
-| `bert-base-nli-max-tokens`             | `en_bert_base_nli_max_tokens`             |  768 | en | 77.21          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_base_nli_max_tokens-0.1.0.tar.gz#en_bert_base_nli_max_tokens-0.1.0`  |
-| `bert-base-nli-cls-token`              | `en_bert_base_nli_cls_token`              |  768 | en | 76.30          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_base_nli_cls_token-0.1.0.tar.gz#en_bert_base_nli_cls_token-0.1.0`  |
-| `bert-large-nli-mean-tokens`           | `en_bert_large_nli_mean_tokens`           | 1024 | en | 79.19          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_large_nli_mean_tokens-0.1.0.tar.gz#en_bert_large_nli_mean_tokens-0.1.0`  |
-| `bert-large-nli-max-tokens`            | `en_bert_large_nli_max_tokens`            | 1024 | en | 78.41          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_large_nli_max_tokens-0.1.0.tar.gz#en_bert_large_nli_max_tokens-0.1.0`  |
-| `bert-large-nli-cls-token`             | `en_bert_large_nli_max_tokens`            | 1024 | en | 78.29          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_large_nli_max_tokens-0.1.0.tar.gz#en_bert_large_nli_max_tokens-0.1.0`  |
-| `roberta-base-nli-mean-tokens`         | `en_roberta_base_nli_mean_tokens`         |  768 | en | 77.49          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_roberta_base_nli_mean_tokens-0.1.0.tar.gz#en_roberta_base_nli_mean_tokens-0.1.0`  |
-| `roberta-large-nli-mean-tokens`        | `en_roberta_large_nli_mean_tokens`        | 1024 | en | 78.69          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_roberta_large_nli_mean_tokens-0.1.0.tar.gz#en_roberta_large_nli_mean_tokens-0.1.0`  |
-| `distilbert-base-nli-mean-tokens`      | `en_distilbert_base_nli_mean_tokens`      |  768 | en | 76.97          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_distilbert_base_nli_mean_tokens-0.1.0.tar.gz#en_distilbert_base_nli_mean_tokens-0.1.0`  |
-| `bert-base-nli-stsb-mean-tokens`       | `en_bert_base_nli_stsb_mean_tokens`       |  768 | en | 85.14          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_base_nli_stsb_mean_tokens-0.1.0.tar.gz#en_bert_base_nli_stsb_mean_tokens-0.1.0`  |
-| `bert-large-nli-stsb-mean-tokens`      | `en_bert_large_nli_stsb_mean_tokens`      | 1024 | en | 85.29          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_bert_large_nli_stsb_mean_tokens-0.1.0.tar.gz#en_bert_large_nli_stsb_mean_tokens-0.1.0`  |
-| `roberta-base-nli-stsb-mean-tokens`    | `en_roberta_base_nli_stsb_mean_tokens`    |  768 | en | 85.40          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_roberta_base_nli_stsb_mean_tokens-0.1.0.tar.gz#en_roberta_base_nli_stsb_mean_tokens-0.1.0`  |
-| `roberta-large-nli-stsb-mean-tokens`   | `en_roberta_large_nli_stsb_mean_tokens`   | 1024 | en | 86.31          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_roberta_large_nli_stsb_mean_tokens-0.1.0.tar.gz#en_roberta_large_nli_stsb_mean_tokens-0.1.0`  |
-| `distilbert-base-nli-stsb-mean-tokens` | `en_distilbert_base_nli_stsb_mean_tokens` |  768 | en | 84.38          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_distilbert_base_nli_stsb_mean_tokens-0.1.0.tar.gz#en_distilbert_base_nli_stsb_mean_tokens-0.1.0`  |
-| `distiluse-base-multilingual-cased`    | `xx_distiluse_base_multilingual_cased`    |  512 | Arabic, Chinese, Dutch, English, French, German, Italian, Korean, Polish, Portuguese, Russian, Spanish, Turkish | 80.10 | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/xx_distiluse_base_multilingual_cased-0.1.0.tar.gz#xx_distiluse_base_multilingual_cased-0.1.0`  |
-| `xlm-r-base-en-ko-nli-ststb`           | `xx_xlm_r_base_en_ko_nli_ststb`           |  768 | en,ko | 81.47       | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/xx_xlm_r_base_en_ko_nli_ststb-0.1.0.tar.gz#xx_xlm_r_base_en_ko_nli_ststb-0.1.0`  |
-| `xlm-r-large-en-ko-nli-ststb`          | `xx_xlm_r_base_en_ko_nli_ststb`           | 1024 | en,ko | 84.05       | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/xx_xlm_r_base_en_ko_nli_ststb-0.1.0.tar.gz#xx_xlm_r_base_en_ko_nli_ststb-0.1.0`  |
+| `bert-base-nli-mean-tokens`            | `en_bert_base_nli_mean_tokens`            |  768 | en | 77.12          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_base_nli_mean_tokens-0.1.1.tar.gz#en_bert_base_nli_mean_tokens-0.1.1`  |
+| `bert-base-nli-max-tokens`             | `en_bert_base_nli_max_tokens`             |  768 | en | 77.21          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_base_nli_max_tokens-0.1.1.tar.gz#en_bert_base_nli_max_tokens-0.1.1`  |
+| `bert-base-nli-cls-token`              | `en_bert_base_nli_cls_token`              |  768 | en | 76.30          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_base_nli_cls_token-0.1.1.tar.gz#en_bert_base_nli_cls_token-0.1.1`  |
+| `bert-large-nli-mean-tokens`           | `en_bert_large_nli_mean_tokens`           | 1024 | en | 79.19          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_large_nli_mean_tokens-0.1.1.tar.gz#en_bert_large_nli_mean_tokens-0.1.1`  |
+| `bert-large-nli-max-tokens`            | `en_bert_large_nli_max_tokens`            | 1024 | en | 78.41          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_large_nli_max_tokens-0.1.1.tar.gz#en_bert_large_nli_max_tokens-0.1.1`  |
+| `bert-large-nli-cls-token`             | `en_bert_large_nli_max_tokens`            | 1024 | en | 78.29          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_large_nli_max_tokens-0.1.1.tar.gz#en_bert_large_nli_max_tokens-0.1.1`  |
+| `roberta-base-nli-mean-tokens`         | `en_roberta_base_nli_mean_tokens`         |  768 | en | 77.49          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_roberta_base_nli_mean_tokens-0.1.1.tar.gz#en_roberta_base_nli_mean_tokens-0.1.1`  |
+| `roberta-large-nli-mean-tokens`        | `en_roberta_large_nli_mean_tokens`        | 1024 | en | 78.69          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_roberta_large_nli_mean_tokens-0.1.1.tar.gz#en_roberta_large_nli_mean_tokens-0.1.1`  |
+| `distilbert-base-nli-mean-tokens`      | `en_distilbert_base_nli_mean_tokens`      |  768 | en | 76.97          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_distilbert_base_nli_mean_tokens-0.1.1.tar.gz#en_distilbert_base_nli_mean_tokens-0.1.1`  |
+| `bert-base-nli-stsb-mean-tokens`       | `en_bert_base_nli_stsb_mean_tokens`       |  768 | en | 85.14          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_base_nli_stsb_mean_tokens-0.1.1.tar.gz#en_bert_base_nli_stsb_mean_tokens-0.1.1`  |
+| `bert-large-nli-stsb-mean-tokens`      | `en_bert_large_nli_stsb_mean_tokens`      | 1024 | en | 85.29          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_bert_large_nli_stsb_mean_tokens-0.1.1.tar.gz#en_bert_large_nli_stsb_mean_tokens-0.1.1`  |
+| `roberta-base-nli-stsb-mean-tokens`    | `en_roberta_base_nli_stsb_mean_tokens`    |  768 | en | 85.40          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_roberta_base_nli_stsb_mean_tokens-0.1.1.tar.gz#en_roberta_base_nli_stsb_mean_tokens-0.1.1`  |
+| `roberta-large-nli-stsb-mean-tokens`   | `en_roberta_large_nli_stsb_mean_tokens`   | 1024 | en | 86.31          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_roberta_large_nli_stsb_mean_tokens-0.1.1.tar.gz#en_roberta_large_nli_stsb_mean_tokens-0.1.1`  |
+| `distilbert-base-nli-stsb-mean-tokens` | `en_distilbert_base_nli_stsb_mean_tokens` |  768 | en | 84.38          | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_distilbert_base_nli_stsb_mean_tokens-0.1.1.tar.gz#en_distilbert_base_nli_stsb_mean_tokens-0.1.1`  |
+| `distiluse-base-multilingual-cased`    | `xx_distiluse_base_multilingual_cased`    |  512 | Arabic, Chinese, Dutch, English, French, German, Italian, Korean, Polish, Portuguese, Russian, Spanish, Turkish | 80.10 | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/xx_distiluse_base_multilingual_cased-0.1.1.tar.gz#xx_distiluse_base_multilingual_cased-0.1.1`  |
+| `xlm-r-base-en-ko-nli-ststb`           | `xx_xlm_r_base_en_ko_nli_ststb`           |  768 | en,ko | 81.47       | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/xx_xlm_r_base_en_ko_nli_ststb-0.1.1.tar.gz#xx_xlm_r_base_en_ko_nli_ststb-0.1.1`  |
+| `xlm-r-large-en-ko-nli-ststb`          | `xx_xlm_r_base_en_ko_nli_ststb`           | 1024 | en,ko | 84.05       | `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/xx_xlm_r_base_en_ko_nli_ststb-0.1.1.tar.gz#xx_xlm_r_base_en_ko_nli_ststb-0.1.1`  |
 
 
 ## Usage
@@ -51,7 +51,7 @@ import spacy_sentence_bert
 nlp = spacy_sentence_bert.load_model('en_roberta_large_nli_stsb_mean_tokens')
 ```
 
-Or if a specific standalone model is installed from GitHub (e.g., from the table above, `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.0/en_roberta_large_nli_stsb_mean_tokens-0.1.0.tar.gz#en_roberta_large_nli_stsb_mean_tokens-0.1.0`), you can load directly the model with the spaCy API:
+Or if a specific standalone model is installed from GitHub (e.g., from the table above, `pip install https://github.com/MartinoMensio/spacy-sentence-bert/releases/download/v0.1.1/en_roberta_large_nli_stsb_mean_tokens-0.1.1.tar.gz#en_roberta_large_nli_stsb_mean_tokens-0.1.1`), you can load directly the model with the spaCy API:
 
 
 ```python
@@ -91,7 +91,7 @@ print(doc_1.similarity(doc_2[0:7]))
 
 To build and upload
 ```bash
-VERSION=0.1.0
+VERSION=0.1.1
 # build the standalone models (17)
 ./build_models.sh
 # build the archive at dist/spacy_sentence_bert-${VERSION}.tar.gz
