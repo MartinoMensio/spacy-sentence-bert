@@ -1,46 +1,90 @@
 import spacy
 
+from spacy.language import Language
 from spacy.tokens import Doc, Span, Token
 from sentence_transformers import SentenceTransformer
 
+from . import util
+
+
+def get_vector(sent):
+    doc = sent.doc
+    model_name = doc._.sentence_bert_model_name
+    model = SentenceBert.get_model(model_name)
+    vector = model.encode([sent.text])[0]
+    return vector
+
+# create an extension where the model will be used
+Doc.set_extension('sentence_bert_model_name', default=None, force=True)
+
+# set the extension both on doc and span level. This will contain the computed vector
+Token.set_extension('sentence_bert', getter=get_vector, force=True)
+Span.set_extension('sentence_bert', getter=get_vector, force=True)
+Doc.set_extension('sentence_bert', getter=get_vector, force=True)
+
+# the pipeline stage factory
+@Language.factory('sentence_bert', default_config={
+    'model_name': None,
+    'debug': True
+})
+def sentence_bert_factory(nlp, name, model_name, debug):
+    if model_name:
+        # esplicitly chosen
+        if model_name not in util.configs:
+            raise ValueError(f'Model "{model_name}" not available. Please choose one of {list(util.configs.keys())}')
+    else:
+        # try to map from existing nlp
+        # the language code needs to match
+        meta_lang = nlp.meta['lang']
+        # try to map from the model name
+        meta_name = nlp.meta["name"]
+        model_name = f'{meta_lang}_{meta_name}'
+        if model_name not in util.configs:
+            raise ValueError(f'Could not map nlp.meta["lang"]={meta_lang} and nlp.meta["name"]={meta_name} to an existing model.\n'
+                    f'Please set the parameter "model_name" to one of {list(util.configs.keys())}')
+    config = util.configs[model_name]
+    return SentenceBert(config, debug=debug)
+
+
 class SentenceBert(object):
 
-    @staticmethod
-    def install_extensions():
-        '''Creates the extensions on docs, spans, tokens'''
-        def vectorise(sent):
-            return sent.doc._.sentence_bert_model.encode([sent.text])[0]
-        
-        # create an extension where the model will be used
-        Doc.set_extension('sentence_bert_model', default=None, force=True)
+    models = {}
 
-        # set the extension both on doc and span level. This will contain the computed vector
-        Token.set_extension('sentence_bert', getter=vectorise, force=True)
-        Span.set_extension('sentence_bert', getter=vectorise, force=True)
-        Doc.set_extension('sentence_bert', getter=vectorise, force=True)
+    def __init__(self, config, debug) -> None:
+        model_name = config['name']
+        self.model = SentenceBert.get_model(model_name)
+        self.model_name = model_name
 
-    
-    @staticmethod
-    def overwrite_vectors(doc):
-        '''Pipeline component that overwrites the vectors'''
-        doc.user_hooks["vector"] = lambda a: a._.sentence_bert
-        doc.user_span_hooks["vector"] = lambda a: a._.sentence_bert
-        doc.user_token_hooks["vector"] = lambda a: a._.sentence_bert
+    def __call__(self, doc):
+        doc._.sentence_bert_model_name = self.model_name
+        set_hooks(doc)
         return doc
 
-
     @staticmethod
-    def create_nlp(config, nlp=None):
-        model = SentenceTransformer(config['name'])
+    def get_model(model_name):
+        if model_name in SentenceBert.models:
+            model = SentenceBert.models[model_name]
+        else:
+            model = SentenceTransformer(model_name)
+            SentenceBert.models[model_name] = model
+        return model
 
-        def add_model_to_doc(doc):
-            doc._.sentence_bert_model = model
-            return doc
-        
-        if not nlp:
-            nlp = spacy.blank(config['spacy_base_model'])
-            nlp.add_pipe(nlp.create_pipe('sentencizer'))
-        nlp.add_pipe(add_model_to_doc, name='sentencebert_add_model_to_doc', first=True)
-        nlp.add_pipe(SentenceBert.overwrite_vectors, name='sentencebert_overwrite_vectors', after='sentencebert_add_model_to_doc')
 
-        return nlp
+def set_hooks(doc):
+    '''Overwrites the vectors from extension attributes'''
+    doc.user_hooks["vector"] = lambda a: a._.sentence_bert
+    doc.user_span_hooks["vector"] = lambda a: a._.sentence_bert
+    doc.user_token_hooks["vector"] = lambda a: a._.sentence_bert
+    return doc
+
+
+def create_nlp(model_name, nlp=None):
+    if model_name not in util.configs:
+        raise ValueError(f'Model "{model_name}" not available')
+    config = util.configs[model_name]
+    if not nlp:
+        nlp = spacy.blank(config['spacy_base_model'])
+        nlp.add_pipe('sentencizer')
+    nlp.add_pipe('sentence_bert', config={'model_name': model_name}, first=True)
+
+    return nlp

@@ -103,7 +103,7 @@ def create_lang(model_name):
     if model_name not in configs:
         raise ValueError(f'Model "{model_name}" not available')
     selected_config = configs[model_name]
-    nlp = language.SentenceBert.create_nlp(selected_config)
+    nlp = language.create_nlp(model_name)
     nlp.vocab.reset_vectors(width=selected_config['dimensions'])
     with open(Path(__file__).parent.absolute() / 'meta' / f'{model_name}.json') as f:
         nlp.meta = json.load(f)

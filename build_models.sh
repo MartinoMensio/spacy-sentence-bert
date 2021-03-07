@@ -1,7 +1,7 @@
 set -e
 
 
-VERSION=0.0.4
+VERSION=0.1.0
 
 for MODEL_NAME in en_bert_base_nli_cls_token en_bert_base_nli_max_tokens en_bert_base_nli_mean_tokens \
     en_bert_large_nli_mean_tokens en_bert_large_nli_max_tokens en_bert_large_nli_cls_token \
