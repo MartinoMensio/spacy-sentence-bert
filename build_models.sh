@@ -1,17 +1,12 @@
 set -e
 
 
-VERSION=0.1.1
+VERSION=0.1.2
 
-for MODEL_NAME in en_bert_base_nli_cls_token en_bert_base_nli_max_tokens en_bert_base_nli_mean_tokens \
-    en_bert_large_nli_mean_tokens en_bert_large_nli_max_tokens en_bert_large_nli_cls_token \
-    en_roberta_base_nli_mean_tokens en_roberta_large_nli_mean_tokens \
-    en_distilbert_base_nli_mean_tokens \
-    en_bert_base_nli_stsb_mean_tokens en_bert_large_nli_stsb_mean_tokens \
-    en_roberta_base_nli_stsb_mean_tokens en_roberta_large_nli_stsb_mean_tokens \
-    en_distilbert_base_nli_stsb_mean_tokens \
-    xx_distiluse_base_multilingual_cased xx_xlm_r_base_en_ko_nli_ststb xx_xlm_r_large_en_ko_nli_ststb
+for FILE_NAME in spacy_sentence_bert/meta/*.json
 do
+    MODEL_NAME="$(basename -- ${FILE_NAME%.*})"
+    echo $MODEL_NAME
     echo "Creating $MODEL_NAME package"
     mkdir -p models/$MODEL_NAME
     # create the nlp and save to disk

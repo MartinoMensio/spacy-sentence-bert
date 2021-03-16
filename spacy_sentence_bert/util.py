@@ -100,7 +100,7 @@ configs = {
         'name': 'nli-bert-base-cls-pooling'
     },
     # Average Word Embeddings Models
-    'en_average_word_embeddings_glove.6B.300d': {
+    'en_average_word_embeddings_glove_6B_300d': {
         'spacy_base_model': 'en',
         'dimensions': 300,
         'name': 'average_word_embeddings_glove.6B.300d'
@@ -115,7 +115,7 @@ configs = {
         'dimensions': 300,
         'name': 'average_word_embeddings_levy_dependency'
     },
-    'en_average_word_embeddings_glove.840B.300d': {
+    'en_average_word_embeddings_glove_840B_300d': {
         'spacy_base_model': 'en',
         'dimensions': 300,
         'name': 'average_word_embeddings_glove.840B.300d'

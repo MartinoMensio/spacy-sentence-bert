@@ -1,7 +1,7 @@
 {
     "lang": "en",
     "name": "nli_bert_large_cls_pooling",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "spacy_version": ">=3.0,<4.0",
     "description": "Wrapper of sentence-transformers models for spaCy",
     "author": "Martino Mensio",
@@ -9,7 +9,7 @@
     "url": "https://github.com/MartinoMensio/spacy-sentence-bert",
     "license": "MIT",
     "requirements": [
-        "spacy-sentence-bert==0.1.1"
+        "spacy-sentence-bert==0.1.2"
     ],
     "sources": [{
         "name": "sentence-transformers",
