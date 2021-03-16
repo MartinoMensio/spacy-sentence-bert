@@ -1,0 +1,35 @@
+{
+    "lang": "en",
+    "name": "stsb_distilbert_base",
+    "version": "0.1.1",
+    "spacy_version": ">=3.0,<4.0",
+    "description": "Wrapper of sentence-transformers models for spaCy",
+    "author": "Martino Mensio",
+    "email": "martino.mensio@open.ac.uk",
+    "url": "https://github.com/MartinoMensio/spacy-sentence-bert",
+    "license": "MIT",
+    "requirements": [
+        "spacy-sentence-bert==0.1.1"
+    ],
+    "sources": [{
+        "name": "sentence-transformers",
+        "url": "https://github.com/UKPLab/sentence-transformers",
+        "license": "Apache-2.0"
+    }],
+    "vectors": {
+        "width": 768,
+        "vectors": 0,
+        "keys": 0,
+        "name": null
+    },
+    "pipeline": [
+        "sentence_bert",
+        "sentencizer"
+    ],
+    "factories": {
+        "sentence_bert": "sentence_bert"
+    },
+    "labels": {
+
+    }
+}

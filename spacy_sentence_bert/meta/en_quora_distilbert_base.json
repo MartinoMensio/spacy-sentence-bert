@@ -1,8 +1,8 @@
 {
-    "lang": "xx",
-    "name": "xlm_r_base_en_ko_nli_ststb",
+    "lang": "en",
+    "name": "quora_distilbert_base",
     "version": "0.1.1",
-    "spacy_version": ">=2.3,<2.4",
+    "spacy_version": ">=3.0,<4.0",
     "description": "Wrapper of sentence-transformers models for spaCy",
     "author": "Martino Mensio",
     "email": "martino.mensio@open.ac.uk",

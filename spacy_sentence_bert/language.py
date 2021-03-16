@@ -30,7 +30,11 @@ Doc.set_extension('sentence_bert', getter=get_vector, force=True)
 def sentence_bert_factory(nlp, name, model_name, debug):
     if model_name:
         # esplicitly chosen
-        if model_name not in util.configs:
+        if model_name in util.configs:
+            # one of the known ones
+            config = util.configs[model_name]
+            model_name = config['name']
+        else:
             # may be a SentenceBert model name directly
             try:
                 return SentenceBert(model_name, debug=debug)

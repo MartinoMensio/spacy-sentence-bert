@@ -1,8 +1,8 @@
 {
     "lang": "en",
-    "name": "roberta_base_nli_mean_tokens",
+    "name": "average_word_embeddings_glove.840B.300d",
     "version": "0.1.1",
-    "spacy_version": ">=2.3,<2.4",
+    "spacy_version": ">=3.0,<4.0",
     "description": "Wrapper of sentence-transformers models for spaCy",
     "author": "Martino Mensio",
     "email": "martino.mensio@open.ac.uk",
@@ -17,7 +17,7 @@
         "license": "Apache-2.0"
     }],
     "vectors": {
-        "width": 768,
+        "width": 300,
         "vectors": 0,
         "keys": 0,
         "name": null

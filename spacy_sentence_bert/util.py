@@ -123,40 +123,40 @@ configs = {
     # Duplicate Questions Detection
     'en_quora_distilbert_base': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'quora-distilbert-base'
     },
     'xx_quora_distilbert_multilingual': {
         'spacy_base_model': 'xx',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'quora-distilbert-multilingual'
     },
     # Question-Answer Retrieval - MSMARCO
     'en_msmarco_distilroberta_base_v2': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'msmarco-distilroberta-base-v2'
     },
     'en_msmarco_roberta_base_v2': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'msmarco-roberta-base-v2'
     },
     'en_msmarco_distilbert_base_v2': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'msmarco-distilbert-base-v2'
     },
     # Question-Answer Retrieval - Natural Questions
     'en_nq_distilbert_base_v1': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'nq-distilbert-base-v1'
     },
     # Multi-Lingual Models
     'xx_distiluse_base_multilingual_cased_v2': {
         'spacy_base_model': 'xx',
-        'dimensions': 300,
+        'dimensions': 512,
         'name': 'distiluse-base-multilingual-cased-v2'
     },
     'xx_stsb_xlm_r_multilingual': {
@@ -166,19 +166,19 @@ configs = {
     },
     'xx_cross_en_de_roberta_sentence_transformer': {
         'spacy_base_model': 'xx',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'T-Systems-onsite/cross-en-de-roberta-sentence-transformer'
     },
     # Bitext mining
     'xx_LaBSE': {
         'spacy_base_model': 'xx',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'LaBSE'
     },
     # Scientific Publications
     'en_allenai_specter': {
         'spacy_base_model': 'en',
-        'dimensions': 300,
+        'dimensions': 768,
         'name': 'allenai-specter'
     },
 
