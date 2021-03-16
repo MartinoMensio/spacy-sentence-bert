@@ -24,8 +24,6 @@ def load(**overrides):
 
 def create_from(nlp, model_name):
     '''From an existing `nlp` object, adds the vectors from the specific `model_name` by adding pipeline stages'''
-    if model_name not in util.configs:
-        raise ValueError(f'Model "{model_name}" not available')
     return language.SentenceBert.create_nlp(model_name, nlp)
 
 def doc_from_bytes(nlp, bytes):
