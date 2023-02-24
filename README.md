@@ -9,8 +9,9 @@ Keep in mind that `sentence-transformers` are configured with a maximum sequence
 ## Install
 
 Compatibility:
-- spaCy>=3.0.0,<4.0.0, tested on version 3.0.3
-- sentence-transformers: tested on version 0.1.4
+- python 3.7/3.8/3.9/3.10
+- spaCy>=3.0.0,<4.0.0, last tested on version 3.5
+- sentence-transformers: tested on version 2.2.2
 
 To install this package, you can run one of the following:
 
