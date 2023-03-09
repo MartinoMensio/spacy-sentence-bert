@@ -1,4 +1,4 @@
-[![Tests](https://github.com/MartinoMensio/spacy-sentence-bert/actions/workflows/tests.yml/badge.svg)](https://github.com/egerber/spaCy-entity-linker/actions/workflows/tests.yml)
+[![Tests](https://github.com/MartinoMensio/spacy-sentence-bert/actions/workflows/tests.yml/badge.svg)](https://github.com/MartinoMensio/spacy-sentence-bert/actions/workflows/tests.yml)
 [![Downloads](https://static.pepy.tech/badge/spacy-sentence-bert)](https://pepy.tech/project/spacy-sentence-bert)
 [![Current Release Version](https://img.shields.io/github/release/MartinoMensio/spacy-sentence-bert.svg?style=flat-square&logo=github)](https://github.com/MartinoMensio/spacy-sentence-bert/releases)
 [![pypi Version](https://img.shields.io/pypi/v/spacy-sentence-bert.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/spacy-sentence-bert/)
