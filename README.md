@@ -1,3 +1,7 @@
+[![Tests](https://github.com/MartinoMensio/spacy-sentence-bert/actions/workflows/tests.yml/badge.svg)](https://github.com/egerber/spaCy-entity-linker/actions/workflows/tests.yml)
+[![Downloads](https://static.pepy.tech/badge/spacy-sentence-bert)](https://pepy.tech/project/spacy-sentence-bert)
+[![Current Release Version](https://img.shields.io/github/release/MartinoMensio/spacy-sentence-bert.svg?style=flat-square&logo=github)](https://github.com/MartinoMensio/spacy-sentence-bert/releases)
+[![pypi Version](https://img.shields.io/pypi/v/spacy-sentence-bert.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/spacy-sentence-bert/)
 # Sentence-BERT for spaCy
 
 This package wraps [sentence-transformers](https://github.com/UKPLab/sentence-transformers) (also known as [sentence-BERT](http://arxiv.org/abs/1908.10084)) directly in spaCy.
@@ -15,7 +19,7 @@ Compatibility:
 
 To install this package, you can run one of the following:
 
-- `pip install spacy_sentence_bert`
+- `pip install spacy-sentence-bert`
 -  `pip install git+https://github.com/MartinoMensio/spacy-sentence-bert.git`
 
 You can install standalone spaCy packages from GitHub with pip. If you install standalone packages, you will be able to load a language model directly by using the `spacy.load` API, without need to add a pipeline stage.
